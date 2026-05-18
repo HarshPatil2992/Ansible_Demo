@@ -1,1 +1,10 @@
 
+jobs:
+  check-os:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Ubuntu Version
+        run: |
+          . /etc/os-release
+          echo "OS: $NAME"
+          echo "Version: $VERSION_ID"
